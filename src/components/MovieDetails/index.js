@@ -97,6 +97,7 @@ class MovieDetails extends Component {
     const inHours = Math.floor(runtime / 60)
     const inMinutes = runtime % 60
     const time = `${inHours}h ${inMinutes}m`
+    const year = format(new Date(releaseDate),'yyyy')
 
     return (
       <div className="movie-detail-container">
@@ -113,7 +114,7 @@ class MovieDetails extends Component {
             <div className="time-container">
               <p className="time-text">{time}</p>
               <p className="certificate-text">U/A</p>
-              <p className="year-text">2007</p>
+              <p className="year-text">{year}</p>
             </div>
             <p className="overview-text">{overview}</p>
             <button type="button" className="btn-design">
